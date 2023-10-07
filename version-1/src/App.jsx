@@ -1,7 +1,27 @@
-function App() {
-  return (
-    <p class="text-4xl text-green-700 text-center py-20">Hello Tailwind!</p>
-  );
-}
+import { Route, Routes, useNavigate, useLocation } from "@solidjs/router";
+import { onMount } from "solid-js";
 
-export default App;
+import Landing from './views/Landing';
+import Login from './views/Login';
+import Settings from "./views/Settings";
+
+import Home from './views/Home';
+import Projects from "./views/Projects";
+import Explore from "./views/Explore";
+
+export default function App() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const token = sessionStorage.getItem("token");
+    // onMount(() => { if (location.pathname != "login" && !token) { navigate("/login", { replace: true }); } });
+    // token ? Home : Landing
+    return (
+        <Routes>
+            <Route path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/explore" component={Explore} />
+            <Route path="/settings" component={Settings} />
+        </Routes>
+    )
+}
