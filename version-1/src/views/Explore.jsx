@@ -3,7 +3,7 @@ import { Projectlist } from "../components/ContentList"
 export default function Explore() {
     return (
         <Plantilla class="grid">
-            <Projectlist />
+            <Projectlist type="all" />
         </Plantilla>
     )
 }
