@@ -19,7 +19,7 @@ function Sidebar({ children }) {
     const location = useLocation();
     const menu = [
         { name: "Home", href: "/", icon: <HomeIcon class="h-8" /> },
-        { name: "Contributions", href: "/projects", icon: <SquaresPlusIcon class="h-8" /> },
+        { name: "My projects", href: "/projects", icon: <SquaresPlusIcon class="h-8" /> },
         { name: "Explore", href: "/explore", icon: <MagnifyingGlassIcon class="h-8" /> }
     ]
     return (
