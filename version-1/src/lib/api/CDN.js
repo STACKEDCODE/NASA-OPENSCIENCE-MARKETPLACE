@@ -8,7 +8,7 @@ export async function uploadIcon(file) {
     formData.append("file", file);
 
     try {
-        const response = await axios.post(`https://172.16.68.153:7227/Upload/Icon`, formData,
+        const response = await axios.post(`https://api.science-interlinked.us/Upload/Icon`, formData,
             {
                 headers: {
                     Authorization: `Bearer ${storage.get("token")}`

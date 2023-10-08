@@ -123,11 +123,9 @@ export function ProjectModal() {
         const file = e.target.file.files[0];
         const res = await uploadIcon(file);
         const icon = res.Data.Id;
-        debugger
         if (icon) {
             const result = await createProject({ name, summary, icon });
             console.log(result)
-            debugger
             if (result) {
                 document.getElementById("createProject").close();
                 window.location.reload();
@@ -176,7 +174,7 @@ export function ProjectModal() {
 const getProjects = async ({ type }) => {
     const storage = new Storage();
     if (type == "@me") {
-        const result = await axios.get(`https://172.16.68.153:7227/api/Project/@me`,
+        const result = await axios.get(`https://api.science-interlinked.us/api/Project/@me`,
             {
                 headers: {
                     Authorization: `Bearer ${storage.get("token")}`
@@ -187,7 +185,7 @@ const getProjects = async ({ type }) => {
         return result;
     }
     else {
-        const result = await axios.get(`https://172.16.68.153:7227/api/Project`,
+        const result = await axios.get(`https://api.science-interlinked.us/api/Project`,
             {
                 headers: {
                     Authorization: `Bearer ${storage.get("token")}`
@@ -233,7 +231,7 @@ export function Projectlist({ type, create }) {
                         (project) => project && (project.Name || project.Summary) &&
                             <div class="p-4 gap-4 bg-white border dark:bg-gray-800 grid grid-cols-4 w-full break-words">
                                 {
-                                    project.Icon && <img class="bg-gray-300 w-full max-h-60 object-contain col-span-1" src={`https://172.16.68.153:7227/Icon/${project.Owner.Id}/${project.Icon}.webp`} alt="icon" />
+                                    project.Icon && <img class="bg-gray-300 w-full max-h-60 object-contain col-span-1" src={`https://api.science-interlinked.us/Icon/${project.Owner.Id}/${project.Icon}.webp`} alt="icon" />
                                 }
                                 <div class="col-span-3 break-words">
                                     <h1 class="text-4xl pb-2 font-semibold text-gray-800 dark:text-white">{project.Name}</h1>
@@ -243,12 +241,12 @@ export function Projectlist({ type, create }) {
                                 <div class='fixed'>
                                     {
                                         project.Owner.Avatar &&
-                                        <img class="bg-gray-300 w-12 h-12 object-contain col-span-1" src={`https://172.16.68.153:7227/Avatar/${project.Owner.Id}/${project.Owner.Avatar}.webp`} alt="avatar" />
+                                        <img class="bg-gray-300 w-12 h-12 object-contain col-span-1" src={`https://api.science-interlinked.us/Avatar/${project.Owner.Id}/${project.Owner.Avatar}.webp`} alt="avatar" />
                                     }
                                     {
                                         project.members &&
                                         project.members.map((member) => (
-                                            <img class="bg-gray-300 w-12 h-12 object-contain col-span-1" src={`https://172.16.68.153:7227/Avatar/${member.Id}/${member.Avatar}.webp`} alt="avatar" />)
+                                            <img class="bg-gray-300 w-12 h-12 object-contain col-span-1" src={`https://api.science-interlinked.us/Avatar/${member.Id}/${member.Avatar}.webp`} alt="avatar" />)
 
                                         )
                                     }
