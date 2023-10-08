@@ -18,7 +18,7 @@ export default function App() {
     onMount(() => { if (location.pathname != "login" && !token) { navigate("/login", { replace: true }); } });
     return (
         <Routes>
-            <Route path="/" component={token ? Home : Landing} />
+            <Route path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/projects" component={Projects} />
             <Route path="/explore" component={Explore} />

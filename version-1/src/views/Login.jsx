@@ -21,8 +21,8 @@ function Header() {
 
 export default function Login() {
     const auth = new Auth()
-    const navigate = useNavigate();
 
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -30,7 +30,7 @@ export default function Login() {
         const password = e.target.password.value;
 
         const login = await auth.login(username, password);
-        if (login.Status == 200) { navigate("/", { replace: true }) }
+        if (login.Status == 200) { navigate("/") }
     };
 
     return (

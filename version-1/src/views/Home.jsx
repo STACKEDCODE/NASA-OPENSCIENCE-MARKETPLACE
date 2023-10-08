@@ -1,5 +1,5 @@
 import Plantilla from "../components/Plantilla"
-import { MagnifyingGlassIcon, SparklesIcon } from "../components/Icons"
+import { MagnifyingGlassIcon } from "../components/Icons"
 import { Trendlist, Posting } from "../components/ContentList"
 import { useNavigate } from "@solidjs/router"
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
-                                navigate("/projects?create=true")
+                                navigate("/projects")
                             }}
                             class="col-span-1 text-white bg-blue-800  hover:bg-blue-900  focus:ring-4 focus:outline-none focus:bg-blue-900 font-medium text-lg w-full w-auto px-5 py-2.5 text-center dark:bg-blue-800  dark:hover:bg-blue-900  dark:focus:ring-red-600">
                             Create

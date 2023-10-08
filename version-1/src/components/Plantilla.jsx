@@ -46,18 +46,28 @@ function Sidebar({ children }) {
                     <ul class="mt-8 fixed bottom-5 font-semibold text-2xl">
                         <hr class="my-4 dark:border-gray-700 w-full" />
                         <li class="flex items-center w-full">
-                            <A href="/login" class=
+                            <p
+                                onClick={() => {
+                                    sessionStorage.removeItem("token")
+                                    window.location.reload()
+                                }}
+                                class=
                                 "flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group w-full">
                                 <Cog6ToothIcon class="h-8" />
                                 <span class="ml-3">Settings</span>
-                            </A>
+                            </p>
                         </li>
                         <li class="flex items-center w-full">
-                            <A href="/login" class=
+                            <p
+                                onClick={() => {
+                                    sessionStorage.removeItem("token")
+                                    window.location.reload()
+                                }}
+                                class=
                                 "flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group w-full">
                                 <ArrowLeftOnRectangleIcon class="h-8" />
                                 <span class="ml-3">Logout</span>
-                            </A>
+                            </p>
                         </li>
                     </ul>
                 </div>
