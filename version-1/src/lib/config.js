@@ -1,4 +1,4 @@
 const config = {
-    api_url: "https://172.16.68.153:7227/api"
+    api_url: "https://api.science-interlinked.us/api"
 }
 export default config;
