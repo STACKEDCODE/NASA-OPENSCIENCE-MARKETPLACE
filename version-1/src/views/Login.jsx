@@ -37,14 +37,14 @@ export default function Login() {
         <>
             <Header />
             <main className="flex absolute inset-0">
-                <div className="mx-auto p-8 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center place-self-center">
-                    <div className="text-center text-3xl text-gray-800 dark:text-white mb-6">
-                        Science Interlinked
-                    </div>
+                <div className="mx-auto p-8 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center place-self-center grid grid-cols-2">
                     <form
                         onSubmit={handleSubmit}
                         class="text-center px-6"
                     >
+                        <div className="text-center text-3xl text-gray-800 dark:text-white mb-6">
+                            Science Interlinked
+                        </div>
                         <div className="mb-6">
                             <input
                                 placeholder="Username or email"
@@ -78,6 +78,23 @@ export default function Login() {
                             Sign in
                         </button>
                     </form>
+                    <div>
+                        <div className="text-center text-3xl text-gray-800 dark:text-white mb-6">
+                            SpaceApps Challenge 2023
+                        </div>
+                        <p className="text-gray-800 dark:text-white mb-6 max-w-sm">
+                            <span className="font-semibold">Science Interlinked</span> is a platform that allows you to share your research and collaborate with other researchers.
+                        </p>
+                        <p className="text-gray-800 dark:text-white mb-6 max-w-sm">
+                            <span className="font-semibold">Login information</span> for the demo account:
+                        </p>
+                        <p className="text-gray-800 dark:text-white max-w-sm">
+                            <span className="font-semibold">Username:</span> nasa
+                        </p>
+                        <p className="text-gray-800 dark:text-white max-w-sm">
+                            <span className="font-semibold">Password:</span> nasa
+                        </p>
+                    </div>
                 </div>
             </main >
         </>
