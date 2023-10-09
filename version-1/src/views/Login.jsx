@@ -91,8 +91,13 @@ export default function Login() {
                         <p className="text-gray-800 dark:text-white max-w-sm">
                             <span className="font-semibold">Username:</span> nasa
                         </p>
-                        <p className="text-gray-800 dark:text-white max-w-sm">
+                        <p className="text-gray-800 dark:text-white mb-6 max-w-sm">
                             <span className="font-semibold">Password:</span> nasa
+                        </p>
+                        <p className="text-gray-800 dark:text-white max-w-sm">
+                            <A href="https://inacapmailcl-my.sharepoint.com/:f:/g/personal/sebastian_morales74_inacapmail_cl/EnKjo1388StNsqMXvc9jwsoBW-EpEoIrBqW1cbGfnb3kfQ?e=hmgsVz" className="text-xl underline mb-4 text-blue-800 hover:text-blue-900 dark:text-blue-800 dark:hover:text-blue-900">
+                                Documentation avalible here
+                            </A>
                         </p>
                     </div>
                 </div>
